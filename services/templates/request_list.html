@@ -1,0 +1,15 @@
+<h2>Service Requests</h2>
+<table border="1">
+<tr>
+  <th>Name</th><th>Service</th><th>Priority</th><th>Status</th><th>View</th>
+</tr>
+{% for r in requests %}
+<tr>
+  <td>{{ r.name }}</td>
+  <td>{{ r.service_type }}</td>
+  <td>{{ r.priority }}</td>
+  <td>{{ r.status }}</td>
+  <td><a href="/request/{{ r.pk }}/">Open</a></td>
+</tr>
+{% endfor %}
+</table>
